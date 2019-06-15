@@ -13,6 +13,7 @@ django-extensions = "*"
 pytest = "*"
 pytest-django = "*"
 pytest-cov = "*"
+djangorestframework-simplejwt = "*"
 
 [requires]
 python_version = "3.7"
