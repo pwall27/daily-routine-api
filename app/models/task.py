@@ -1,3 +1,5 @@
+import uuid
+
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 
@@ -10,6 +12,13 @@ class Task(models.Model):
         verbose_name = _('Task')
         verbose_name_plural = _('Tasks')
 
+    uuid = models.UUIDField(
+        verbose_name=_('Public ID'),
+        default=uuid.uuid4,
+        editable=False,
+        unique=True
+    )
+
     title = models.CharField(
         verbose_name=_('Title'),
         max_length=150)
@@ -21,6 +30,12 @@ class Task(models.Model):
     is_active = models.BooleanField(
         verbose_name=_('Is Active?'),
         default=True)
+
+    owner = models.ForeignKey(
+        to='User',
+        on_delete=models.CASCADE,
+        related_name='tasks'
+    )
 
     created_at = models.DateTimeField(
         verbose_name=_('Created Date'),
