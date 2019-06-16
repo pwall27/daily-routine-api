@@ -5,7 +5,7 @@ from mixer.backend.django import mixer
 from rest_framework.exceptions import ValidationError
 
 from app.models import Task
-from app.serializers.task import TaskSerializer
+from app.serializers import TaskSerializer
 
 fake = Faker()
 
