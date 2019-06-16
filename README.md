@@ -1,5 +1,5 @@
-# Daily Routine API
-Daily Routine API is a project to create, log and follow tasks that are part of my daily routine.
+# Routine Tasks API
+Routine Tasks API is a project to create, log and follow tasks that are part of my daily routine.
 
 ## Future Features
 - Add new task
